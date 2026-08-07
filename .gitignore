@@ -1,0 +1,43 @@
+# Unity generated directories
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Unity temporary files
+*.tmp
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# IDE files
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.userprefs
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local Unity tooling
+.utmp/
+Assets/#Meta/
+Assets/#Meta.meta
+
+# Local experiment output (if the path is changed into the project)
+ExperimentalData/
