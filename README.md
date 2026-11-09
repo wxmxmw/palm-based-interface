@@ -1,39 +1,39 @@
 # Palm-Based Interface
 
-面向 Meta Quest 3 的掌心式混合现实（MR）实验界面。项目使用手部追踪和捏合交互，让用户无需控制器即可显示、隐藏并操作躯干前方的空间 UI。
+A palm-based Mixed Reality (MR) experimental interface developed for Meta Quest 3. The project leverages hand tracking and pinch gestures to enable users to show, hide, and interact with a spatial UI positioned in front of their torso, without requiring physical controllers.
 
-## 功能介绍
+## Features
 
-项目通过 Quest 3 的 Passthrough 显示真实环境，并在用户躯干前方呈现空间任务面板。整个流程使用手部追踪完成，不依赖控制器。
+The application uses Meta Quest 3's Passthrough capability to display the real-world environment while presenting a spatial task panel in front of the user's torso. The entire interaction workflow is supported by hand tracking, eliminating the need for controllers.
 
-- **掌心菜单显隐**：右手张开、掌心朝上并保持约 `0.7` 秒，即可切换界面的显示状态；触发后带有冷却与手势释放判定，避免连续误触。
-- **躯干跟随面板**：面板根据胸部和脊柱追踪结果放置在用户前方，并对位置、朝向进行平滑和防抖处理。
-- **自然手势交互**：用户可通过手部射线悬停控件，并使用拇指与食指捏合完成按钮点击和数字选择。
-- **参与者编号**：实验开始前选择 `P001–P099` 范围内的用户编号，用于区分不同参与者的数据。
-- **三阶段任务流程**：每轮依次完成“前往指定站点”“查看纸张号码”和“选择并提交号码”三个阶段，提交后可开始下一轮。
-- **答案与轮次管理**：支持为每轮配置正确号码，记录用户选择及判断结果，并在重新开始时自动增加轮次。
-- **实验数据记录**：分别统计三个阶段的实际耗时，每轮提交后立即追加到 CSV，包含用户编号、实验版本、轮次、选择值、正确值和 UTC 时间等信息。
-- **短时反馈**：可在操作完成后显示定时反馈内容，帮助用户确认交互已成功触发。
+- **Palm-Activated Menu Toggle**: Users can toggle the interface's visibility by opening their right hand, facing their palm upward, and holding the gesture for approximately `0.7` seconds. A cooldown mechanism and gesture-release detection prevent accidental repeated activation.
+- **Torso-Following Interface**: The spatial panel is positioned in front of the user based on chest and spine tracking data, with smoothing and stabilization applied to its position and orientation.
+- **Natural Gesture Interaction**: Users can hover over UI elements using hand rays and perform button clicks or number selections through thumb-index finger pinch gestures.
+- **Participant Identification**: Before starting the experiment, users select a participant ID ranging from `P001` to `P099` to distinguish data collected from different participants.
+- **Three-Stage Task Workflow**: Each trial consists of three sequential stages: navigating to a designated station, reading a number printed on paper, and selecting and submitting the corresponding number. A new trial can begin after submission.
+- **Answer and Trial Management**: The system supports configurable correct answers for each trial, records participants' selections and their correctness, and automatically increments the trial number when a new trial begins.
+- **Experimental Data Logging**: The application independently measures the actual completion time of each task stage. After each trial, data is immediately appended to a CSV file, including the participant ID, experimental version, trial number, selected answer, correct answer, and UTC timestamp.
+- **Timed Feedback**: Brief feedback messages can be displayed after interactions to confirm successful actions.
 
-## 开发环境
+## Development Environment
 
 - Unity `6000.3.21f1`
 - Meta XR All-in-One SDK `205.0.0`
 - Universal Render Pipeline `17.3.0`
 - OpenXR `1.16.1`
-- 目标设备：Meta Quest 3（Android）
+- Target Device: Meta Quest 3 (Android)
 
-## 项目结构
+## Project Structure
 
 ```text
-Assets/Scenes/          主场景
-Assets/Prefabs/         掌心菜单预制体
-Assets/Scripts/         手势、面板跟随、任务流程与数据记录
-documentation/          需求与开发说明
-Packages/               Unity 包依赖
-ProjectSettings/        Unity 项目设置
+Assets/Scenes/          Main scene
+Assets/Prefabs/         Palm menu prefabs
+Assets/Scripts/         Gesture recognition, panel tracking, task workflow, and data logging
+documentation/          Requirements and development documentation
+Packages/               Unity package dependencies
+ProjectSettings/        Unity project settings
 ```
 
-## 说明
+## Notes
 
-本项目当前用于研究与原型验证，暂未提供公开许可证。
+This project is currently intended for research and prototype validation. No public license has been provided.
